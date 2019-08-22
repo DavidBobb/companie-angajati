@@ -2,14 +2,24 @@ public class Candidate {
 
     private String firstName;
     private String secondName;
-    private String depositName;
+    private String departmentName;
     private int skillLevel;
+    private CandidateStatus candidateStatus;
 
     public Candidate(String firstName, String secondName, String depositName, int skillLevel) {
         this.firstName = firstName;
         this.secondName = secondName;
-        this.depositName = depositName;
+        this.departmentName = depositName;
         this.skillLevel = skillLevel;
+        this.candidateStatus = CandidateStatus.WAITING;
+    }
+
+    public CandidateStatus getCandidateStatus() {
+        return candidateStatus;
+    }
+
+    public void setCandidateStatus(CandidateStatus candidateStatus) {
+        this.candidateStatus = candidateStatus;
     }
 
     public String getFirstName() {
@@ -28,12 +38,12 @@ public class Candidate {
         this.secondName = secondName;
     }
 
-    public String getDepositName() {
-        return depositName;
+    public String getDepartmentName() {
+        return departmentName;
     }
 
-    public void setDepositName(String depositName) {
-        this.depositName = depositName;
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
     }
 
     public int getSkillLevel() {

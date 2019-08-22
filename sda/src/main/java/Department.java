@@ -19,7 +19,7 @@ public class Department {
         this.name = name;
     }
 
-    public int getNimLevelOfSkill() {
+    public int getMinLevelOfSkill() {
         return nimLevelOfSkill;
     }
 

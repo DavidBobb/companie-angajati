@@ -1,7 +1,16 @@
 public class Production extends Department implements Evaluator {
 
-    public CandidateStatus evaluate(Candidate candidat) {
+    public Production() {
+        super("Production", 3);
+    }
 
-        return CandidateStatus.ACCEPTED;
+    public CandidateStatus evaluate(Candidate candidate) {
+        if (candidate.getSkillLevel() > super.getMinLevelOfSkill()) {
+            return CandidateStatus.ACCEPTED;
+        } else if (candidate.getSkillLevel() < super.getMinLevelOfSkill()) {
+            return CandidateStatus.REJECTED;
+        } else {
+            return CandidateStatus.WAITING;
+        }
     }
 }
