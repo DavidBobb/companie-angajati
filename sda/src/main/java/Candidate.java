@@ -6,10 +6,10 @@ public class Candidate {
     private int skillLevel;
     private CandidateStatus candidateStatus;
 
-    public Candidate(String firstName, String secondName, String depositName, int skillLevel) {
+    public Candidate(String firstName, String secondName, String departmentName, int skillLevel) {
         this.firstName = firstName;
         this.secondName = secondName;
-        this.departmentName = depositName;
+        this.departmentName = departmentName;
         this.skillLevel = skillLevel;
         this.candidateStatus = CandidateStatus.WAITING;
     }

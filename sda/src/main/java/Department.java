@@ -3,12 +3,12 @@ public class Department {
     private String name;
     private int nimLevelOfSkill;
 
-    public Department() {
-    }
-
     public Department(String name, int nimLevelOfSkill) {
         this.name = name;
         this.nimLevelOfSkill = nimLevelOfSkill;
+    }
+
+    public Department() {
     }
 
     public String getName() {

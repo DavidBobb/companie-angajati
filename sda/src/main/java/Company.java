@@ -6,7 +6,7 @@ public class Company {
     private List<Candidate> employee;
     private List<Department> departments;
 
-    public Company(String name, List<Candidate> employee, List<Department> departments) {
+    public Company(String name) {
         this.name = name;
         this.employee = employee;
         this.departments = departments;
@@ -41,7 +41,7 @@ public class Company {
     }
 
     //to be implemented
-    public void recrute(Candidate candidate) {
+    public void recruit(Candidate candidate) {
         if (candidate.getDepartmentName().equalsIgnoreCase("Marketing")) {
             Marketing m = new Marketing();
             CandidateStatus status = m.evaluate(candidate);
