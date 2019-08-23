@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,14 +34,35 @@ public class Main {
 
         company.setEmployee(candidates);
 
-        for (Candidate i : candidates) {
-            try {
-                company.recruit(i);
-                System.out.println(i.getCandidateStatus());
-            } catch (IncapacityOfEvaluation e){
-                System.out.println("Recruitment exception !");
-            }
-            
+        try {
+            company.recruit();
+        } catch (IncapacityOfEvaluation e) {
         }
+
+        writeCandidatesToTxtFile(company.getEmployee());
+
+    }
+
+    public static void writeCandidatesToTxtFile(List<Candidate> candidates) {
+
+        BufferedWriter writer = null;
+        try {
+
+            String str = "Hello";
+            writer = new BufferedWriter(new FileWriter("candidates.exe"));
+            writer.write(candidates.toString());
+
+            writer.close();
+        } catch (IOException e) {
+
+        } finally {
+            try {
+                writer.close();
+            } catch (IOException e) {
+
+            }
+        }
+
     }
 }
+

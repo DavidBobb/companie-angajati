@@ -41,17 +41,19 @@ public class Company {
     }
 
     //to be implemented
-    public void recruit(Candidate candidate) {
-        if (candidate.getDepartmentName().equalsIgnoreCase("Marketing")) {
-            Marketing m = new Marketing();
-            CandidateStatus status = m.evaluate(candidate);
-            candidate.setCandidateStatus(status);
-        } else if (candidate.getDepartmentName().equalsIgnoreCase("Production")) {
-            Production p = new Production();
-            CandidateStatus status = p.evaluate(candidate);
-            candidate.setCandidateStatus(status);
-        } else {
-            throw new IncapacityOfEvaluation("The candidate can't be evaluated.");
+    public void recruit() {
+        for (Candidate candidate : this.employee) {
+            if (candidate.getDepartmentName().equalsIgnoreCase("Marketing")) {
+                Marketing m = new Marketing();
+                CandidateStatus status = m.evaluate(candidate);
+                candidate.setCandidateStatus(status);
+            } else if (candidate.getDepartmentName().equalsIgnoreCase("Production")) {
+                Production p = new Production();
+                CandidateStatus status = p.evaluate(candidate);
+                candidate.setCandidateStatus(status);
+            } else {
+                throw new IncapacityOfEvaluation("The candidate can't be evaluated.");
+            }
         }
     }
 }

@@ -1,0 +1,53 @@
+[
+
+Candidate: 
+
+First name: Ionut
+
+Second name: Ionescu
+
+Department name: Marketing
+
+Skill level: 10
+
+Candidate status: ACCEPTED
+, 
+
+Candidate: 
+
+First name: Ioana
+
+Second name: Vladescu
+
+Department name: Production
+
+Skill level: 1
+
+Candidate status: REJECTED
+, 
+
+Candidate: 
+
+First name: Andrei
+
+Second name: Pascu
+
+Department name: Production
+
+Skill level: 7
+
+Candidate status: ACCEPTED
+, 
+
+Candidate: 
+
+First name: Calin
+
+Second name: Mesteacan
+
+Department name: HR
+
+Skill level: 3
+
+Candidate status: WAITING
+]

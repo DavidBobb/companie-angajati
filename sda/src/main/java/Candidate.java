@@ -53,4 +53,14 @@ public class Candidate {
     public void setSkillLevel(int skillLevel) {
         this.skillLevel = skillLevel;
     }
+
+    @Override
+    public String toString() {
+        return "\n" + "\n" + "Candidate: " + "\n" + "\n" +
+                "First name: " + firstName + "\n" + "\n" +
+                "Second name: " + secondName + "\n" + "\n" +
+                "Department name: " + departmentName + "\n" + "\n" +
+                "Skill level: " + skillLevel + "\n" + "\n" +
+                "Candidate status: " + candidateStatus + "\n";
+    }
 }
